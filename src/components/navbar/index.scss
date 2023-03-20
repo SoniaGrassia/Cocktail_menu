@@ -1,0 +1,32 @@
+.Navbar {
+  border-bottom: 1px solid palevioletred;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__title {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.6em;
+    padding: 10px 20px;
+    margin: 0;
+  }
+  &__list {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    gap: 10px;
+    padding-inline-start: 0;
+    padding: 0 10px;
+    list-style-type: none;
+    font-size: 0.6rem;
+  }
+  &__item {
+    cursor: pointer;
+    padding: 4px;
+    border-bottom: 1px solid #242424;
+  }
+  &__item:hover {
+    cursor: pointer;
+    color: palevioletred;
+    border-bottom: 1px solid palevioletred;
+    transition: all 0.35s;
+  }
+}

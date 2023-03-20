@@ -1,0 +1,25 @@
+.Hero {
+  border-bottom: 1px solid palevioletred;
+  padding: 8px;
+  &__list {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 8px;
+    font-size: 0.8rem;
+  }
+  &__item {
+    cursor: pointer;
+    padding: 2px;
+  }
+  &__item:hover {
+    cursor: pointer;
+    color: palevioletred;
+    border-bottom: 1px solid palevioletred;
+    transition: all 0.35s;
+  }
+}
