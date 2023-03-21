@@ -1,32 +1,39 @@
+@import "../../../style/variables";
+@import "../../../style/mixins";
+
 .Navbar {
-  border-bottom: 1px solid palevioletred;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(row, space-between, center, 0, nowrap);
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  border-bottom: 1px solid $secondary-color;
   &__title {
-    font-family: "Dancing Script", cursive;
+    font-family: $second-font;
     font-size: 1.6em;
-    padding: 10px 20px;
-    margin: 0;
+    @include space-around(0, 10px, 20px);
+    // margin: 0;
+    // padding: 10px 20px;
   }
   &__list {
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    gap: 10px;
-    padding-inline-start: 0;
-    padding: 0 10px;
-    list-style-type: none;
+    @include flex(row, space-evenly, center, 10px, nowrap);
+    // display: flex;
+    // gap: 10px;
     font-size: 0.6rem;
+    list-style-type: none;
+    padding-inline-start: 0;
+    @include space-around(0, 0, 10px);
+    // padding: 0 10px;
   }
   &__item {
-    cursor: pointer;
-    padding: 4px;
     border-bottom: 1px solid #242424;
+    cursor: pointer;
+    @include space-around(0, 4px, 4px);
+    // padding: 4px;
   }
   &__item:hover {
+    border-bottom: 1px solid $secondary-color;
+    color: $secondary-color;
     cursor: pointer;
-    color: palevioletred;
-    border-bottom: 1px solid palevioletred;
     transition: all 0.35s;
   }
 }

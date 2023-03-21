@@ -7,6 +7,7 @@ import "./App.scss";
 
 function App() {
   const [cocktailList, setCocktailList] = useState([]);
+  const [filteredList, setFilteredList] = useState("Ordinary Drink");
 
   useEffect(() => {
     GET("search.php?f=s").then(({ drinks }) => {
@@ -16,8 +17,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Hero />
-      <Content cocktailList={cocktailList} />
+      <Hero setFilteredList={setFilteredList} />
+      <Content cocktailList={cocktailList} filteredList={filteredList} />
     </div>
   );
 }

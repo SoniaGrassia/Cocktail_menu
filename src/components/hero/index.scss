@@ -1,25 +1,30 @@
+@import "../../../style/variables";
+@import "../../../style/mixins";
 .Hero {
-  border-bottom: 1px solid palevioletred;
-  padding: 8px;
+  border-bottom: 1px solid $secondary-color;
+  @include space-around(0, 8px, 8px);
+  // padding: 8px;
   &__list {
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 20px;
-    list-style-type: none;
-    margin: 0;
-    padding: 10px 8px;
+    @include flex(row, space-evenly, center, 20px, wrap);
+    // display: flex;
+    // justify-content: space-evenly;
+    // flex-wrap: wrap;
+    // gap: 20px;
     font-size: 0.8rem;
+    list-style-type: none;
+    @include space-around(0, 10px, 8px);
+    // margin: 0;
+    // padding: 10px 8px;
   }
   &__item {
     cursor: pointer;
-    padding: 2px;
+    @include space-around(0, 2px, 2px);
+    // padding: 2px;
   }
   &__item:hover {
+    border-bottom: 1px solid $secondary-color;
     cursor: pointer;
-    color: palevioletred;
-    border-bottom: 1px solid palevioletred;
+    color: $secondary-color;
     transition: all 0.35s;
   }
 }

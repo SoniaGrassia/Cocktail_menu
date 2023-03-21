@@ -1,7 +1,10 @@
+@import "../../../style/mixins";
 .Content {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 60px;
-  margin: 12px;
+  @include flex(row, space-evenly, center, 40px, wrap);
+  // display: flex;
+  // justify-content: space-evenly;
+  // flex-wrap: wrap;
+  // gap: 40px;
+  @include space-around(12px, 0, 0) // margin: 12px;
+;
 }

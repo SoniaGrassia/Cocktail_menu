@@ -1,0 +1,15 @@
+@import "./variables";
+
+@mixin flex($direction, $justify, $align, $gap, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+@mixin space-around($all: 0, $top-bot: 0, $left-right: 0) {
+  margin: $all;
+  padding: $top-bot $left-right;
+}
