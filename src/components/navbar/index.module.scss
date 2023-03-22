@@ -7,6 +7,7 @@
   // justify-content: space-between;
   // align-items: center;
   border-bottom: 1px solid $secondary-color;
+
   .title {
     font-family: $second-font;
     font-size: 1.6em;
@@ -14,11 +15,16 @@
     // margin: 0;
     // padding: 10px 20px;
   }
+
+  .hamburger {
+    display: none;
+  }
+
   .list {
     @include flex(row, space-evenly, center, 10px, nowrap);
     // display: flex;
     // gap: 10px;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     list-style-type: none;
     padding-inline-start: 0;
     @include space-around(0, 0, 10px);
@@ -30,18 +36,30 @@
     cursor: pointer;
     @include space-around(0, 4px, 4px);
     // padding: 4px;
-  }
-  .item:hover {
-    border-bottom: 1px solid $secondary-color;
-    color: $secondary-color;
-    cursor: pointer;
-    transition: all 0.35s;
+    &:hover {
+      border-bottom: 1px solid $secondary-color;
+      color: $secondary-color;
+      cursor: pointer;
+      transition: all 0.35s;
+    }
   }
 }
 
-@media screen and (min-width: 600px) {
-  .list {
-    display: none;
-    // border: 1px solid red;
+@media screen and (max-width: 600px) {
+  .Navbar {
+    .list {
+      display: none;
+    }
+
+    .hamburger {
+      @include space-around(0, 1px, 20px);
+      display: flex;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
   }
 }
