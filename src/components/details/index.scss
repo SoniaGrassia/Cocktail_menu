@@ -1,2 +1,22 @@
 .Details {
+  display: flex;
+  font-size: 0.8em;
+  border: 1px solid red;
+  margin: 10px;
+  height: 300px;
+  &__container-image {
+    // border: 1px solid blue;
+    width: 50%;
+    height: 100%;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__container-text {
+    border: 1px solid green;
+    width: 50%;
+    height: 100%;
+  }
 }

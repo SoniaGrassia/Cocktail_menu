@@ -3,6 +3,7 @@ import { GET } from "./utils/http";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import Content from "./components/content";
+import Details from "./components/details";
 import "./App.scss";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      {/* <Details /> */}
       <Hero setFilteredList={setFilteredList} />
       <Content cocktailList={cocktailList} filteredList={filteredList} />
     </div>
