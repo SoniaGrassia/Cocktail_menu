@@ -1,11 +1,10 @@
-import { useState } from "react";
 import Card from "../card";
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const Content = ({ cocktailList, filteredList }) => {
   // console.log(cocktailList);
   return (
-    <div className="Content">
+    <div className={styles.Content}>
       {cocktailList
         .filter((cocktail) => cocktail.strCategory === filteredList)
         .map((cocktail) => (

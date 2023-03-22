@@ -1,21 +1,21 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const Details = () => {
   return (
-    <div className="Details">
-      <div className="Details__container-image">
+    <div className={styles.Details}>
+      <div className={styles.containerImage}>
         <img
-          className="Details__image"
+          className={styles.image}
           src="https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg"
           alt=""
         />
       </div>
-      <div className="Details__container-text">
-        <h1 className="Details__title">strDrink</h1>
-        <p className="Details__category">strCategory</p>
-        <p className="Details__glass">strGlass</p>
-        <p className="Details__ingredients">strIngredient</p>
-        <p className="Details__instructions">strInstructionsIT</p>
+      <div className={styles.containerText}>
+        <h1 className={styles.title}>strDrink</h1>
+        <p className={styles.category}>strCategory</p>
+        <p className={styles.glass}>strGlass</p>
+        <p className={styles.ingredients}>strIngredient</p>
+        <p className={styles.instructions}>strInstructionsIT</p>
       </div>
     </div>
   );

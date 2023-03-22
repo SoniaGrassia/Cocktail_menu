@@ -1,4 +1,4 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const categories = [
   { id: 1, strCategory: "Ordinary Drink" },
@@ -16,12 +16,12 @@ const Hero = ({ setFilteredList }) => {
     setFilteredList(value);
   };
   return (
-    <div className="Hero">
-      <ul className="Hero__list">
+    <div className={styles.Hero}>
+      <ul className={styles.list}>
         {categories.map((category) => (
           <li
             onClick={() => onHandleClick(category.strCategory)}
-            className="Hero__item"
+            className={styles.item}
             key={category.id}
           >
             {category.strCategory.toUpperCase()}

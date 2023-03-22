@@ -4,7 +4,7 @@ import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import Content from "./components/content";
 import Details from "./components/details";
-import "./App.scss";
+import styles from "./App.module.scss";
 
 function App() {
   const [cocktailList, setCocktailList] = useState([]);
@@ -16,7 +16,7 @@ function App() {
     });
   }, []);
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Navbar />
       {/* <Details /> */}
       <Hero setFilteredList={setFilteredList} />

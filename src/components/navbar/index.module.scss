@@ -7,14 +7,14 @@
   // justify-content: space-between;
   // align-items: center;
   border-bottom: 1px solid $secondary-color;
-  &__title {
+  .title {
     font-family: $second-font;
     font-size: 1.6em;
     @include space-around(0, 10px, 20px);
     // margin: 0;
     // padding: 10px 20px;
   }
-  &__list {
+  .list {
     @include flex(row, space-evenly, center, 10px, nowrap);
     // display: flex;
     // gap: 10px;
@@ -24,16 +24,24 @@
     @include space-around(0, 0, 10px);
     // padding: 0 10px;
   }
-  &__item {
+
+  .item {
     border-bottom: 1px solid #242424;
     cursor: pointer;
     @include space-around(0, 4px, 4px);
     // padding: 4px;
   }
-  &__item:hover {
+  .item:hover {
     border-bottom: 1px solid $secondary-color;
     color: $secondary-color;
     cursor: pointer;
     transition: all 0.35s;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .list {
+    display: none;
+    // border: 1px solid red;
   }
 }
