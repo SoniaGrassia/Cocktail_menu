@@ -17,6 +17,8 @@
     // padding: 10px 8px;
   }
   .item {
+    border-bottom: 1px solid $background;
+
     cursor: pointer;
     @include space-around(0, 2px, 2px);
     // padding: 2px;

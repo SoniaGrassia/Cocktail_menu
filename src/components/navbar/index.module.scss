@@ -6,6 +6,7 @@
   // display: flex;
   // justify-content: space-between;
   // align-items: center;
+  height: 50px;
   border-bottom: 1px solid $secondary-color;
 
   .title {
@@ -14,10 +15,6 @@
     @include space-around(0, 10px, 20px);
     // margin: 0;
     // padding: 10px 20px;
-  }
-
-  .hamburger {
-    display: none;
   }
 
   .list {
@@ -31,8 +28,12 @@
     // padding: 0 10px;
   }
 
+  .hamburger {
+    display: none;
+  }
+
   .item {
-    border-bottom: 1px solid #242424;
+    border-bottom: 1px solid $background;
     cursor: pointer;
     @include space-around(0, 4px, 4px);
     // padding: 4px;

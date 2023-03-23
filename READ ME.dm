@@ -1,2 +1,1 @@
-Sono riuscita a fare l'esercizo base in un quarto d'ora,
-continuo a lavorare all'avanzato anche dopo l'orario di consegna.
+Manca il POPUP inserito come componente all'interno di app, provvisoriamente ho messo un allert alla fine della prenotazione
