@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { GET } from "./utils/http";
 import Navbar from "./components/navbar";
-import Hero from "./components/hero";
+import HeroStyled from "./components/herostyled";
 import Content from "./components/content";
 import Details from "./components/details";
 import SideMenu from "./components/sidemenu";
@@ -27,7 +27,7 @@ function App() {
       )}
       {closeModal && <ReservationModal setCloseModal={setCloseModal} />}
       {/* <Details /> */}
-      <Hero setFilteredList={setFilteredList} />
+      <HeroStyled setFilteredList={setFilteredList} />
       <Content cocktailList={cocktailList} filteredList={filteredList} />
     </div>
   );
