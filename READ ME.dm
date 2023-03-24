@@ -1,1 +1,0 @@
-Manca il POPUP inserito come componente all'interno di app, provvisoriamente ho messo un allert alla fine della prenotazione
