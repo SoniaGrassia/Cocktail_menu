@@ -1,10 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300&display=swap");
-@import "../style/variables";
-@import "../style/mixins";
-
 body {
   font-family: $first-font;
   @include space-around();
-  // margin: 0;
   background-color: $background;
 }

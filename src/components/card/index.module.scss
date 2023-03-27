@@ -1,6 +1,3 @@
-@import "../../../style/variables";
-@import "../../../style/mixins";
-
 @counter-style repeating-emoji {
   system: cyclic;
   // symbols: "\1F378""\1F377""\1F379""\1F37E";
@@ -11,23 +8,18 @@
 .Card {
   position: relative;
   @include flex(row, flex-end, center, 0, nowrap);
-  // display: flex;
-  // justify-content: flex-end;
   border: 1px solid $secondary-color;
   box-shadow: 0 0 4px $secondary-color;
   border-radius: 60px 0 60px 0;
-  width: 300px;
-  height: 400px;
+  @include size(300px, 400px);
   @include space-around(8px, 0, 0);
-  // margin: 8px;
   perspective: 10000px;
 
   .image {
     border-radius: 60px 0 60px 0;
     filter: blur(0.5px) contrast(80%);
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    @include size(100%);
   }
   .description {
     background-color: $background-alpha;
@@ -35,13 +27,11 @@
     right: 0;
     bottom: 0;
     @include space-around(0, 12px, 12px);
-    // padding: 12px;
     position: absolute;
   }
   .title {
-    font-size: 1.6em;
+    font-size: $size-big;
     @include space-around(0, 0, 0);
-    // margin: 0;
     text-shadow: 0px 2px 4px $secondary-color;
   }
   .front,
@@ -49,28 +39,24 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    @include size(100%);
     backface-visibility: hidden;
-    transition: transform 0.6s;
+    transition: $slow;
     transform-style: preserve-3d;
     border-radius: 60px 0 60px 0;
     box-shadow: 0 0 4px $secondary-color;
   }
 
   .back {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(row, center, center, 0, nowrap);
     border-radius: 60px 0 60px 0;
     transform: rotateY(180deg);
     text-align: justify;
     .instructions {
       @include space-around(12px, 4px, 6px);
       position: relative;
-      font-size: 0.9em;
+      font-size: $size-small;
       text-shadow: 0px 2px 4px $secondary-color;
-      height: 50%;
     }
   }
 
@@ -84,12 +70,8 @@
 
   .ingredientsList {
     @include flex(column, space-evenly, start, 10px, nowrap);
-    // display: flex;
-    // flex-direction: column;
-    // gap: 10px;
     list-style-type: repeating-emoji;
     @include space-around(8px, 0, 40px);
-    // margin: 8px;
     text-shadow: 0px 2px 4px $secondary-color;
   }
 }

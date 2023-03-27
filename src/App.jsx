@@ -3,7 +3,6 @@ import { GET } from "./utils/http";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import Content from "./components/content";
-import Details from "./components/details";
 import SideMenu from "./components/sidemenu";
 import ReservationModal from "./components/reservationmodal";
 import styles from "./App.module.scss";
@@ -26,7 +25,6 @@ function App() {
         <SideMenu setCloseModal={setCloseModal} setIsVisible={setIsVisible} />
       )}
       {closeModal && <ReservationModal setCloseModal={setCloseModal} />}
-      {/* <Details /> */}
       <Hero setFilteredList={setFilteredList} />
       <Content cocktailList={cocktailList} filteredList={filteredList} />
     </div>

@@ -1,8 +1,4 @@
-@import "../style/variables";
-@import "../style/mixins";
-
 .App {
   @include space-around();
-  // margin: 0;
   color: $primary-color;
 }

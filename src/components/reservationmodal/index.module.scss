@@ -1,11 +1,7 @@
-@import "../../../style/variables";
-@import "../../../style/mixins";
-
 .ReservationModal {
   font-family: $first-font;
   position: fixed;
-  width: 80vw;
-  height: 60vh;
+  @include size(80vw, 60vh);
   z-index: 1;
   text-align: center;
 
@@ -13,8 +9,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    @include size(100%);
     background-color: $secondary-color-alpha;
   }
   .content {
@@ -22,8 +17,7 @@
     position: fixed;
     top: 25vh;
     left: 5%;
-    height: 50vh;
-    width: 90%;
+    @include size(90%, 50vh);
     border-radius: 12px;
     border: 1px solid $secondary-color;
     box-shadow: 0 0 12px $secondary-color;
@@ -34,8 +28,7 @@
     .form {
       @include flex(column, center, center, 10px, nowrap);
       .input {
-        width: 260px;
-        height: 30px;
+        @include size(260px, 30px);
         border: 0;
         outline: none;
         border-radius: 10px;
